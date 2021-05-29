@@ -9,8 +9,8 @@ import time
 
 #sched = BlockingScheduler()
 passw = "XXXX"                             # change to u r mail password
-mail  = "vijaysidwick95@gmail.com"         # change to u r mail id
-Resume_Headline = "B. E with 2 Years of experience in Data Analysis | Tableau | Mysql | Excel | Python | Data Visualization"
+mail  = "user@gmail.com"         # change to u r mail id
+Resume_Headline = "Degree with X Years of experience in Skills"
 
 
 #@sched.scheduled_job('interval', minutes=3)
@@ -40,13 +40,13 @@ def executor():
 
 
     Keyskill = driver.find_element_by_id("qsb-keyskill-sugg")
-    Keyskill.send_keys("Data Analyst,Tableau Developer")
+    Keyskill.send_keys("Developer")
 
     Location = driver.find_element_by_id("qsb-location-sugg")
-    Location.send_keys("Bangalore")
+    Location.send_keys("Delhi")
 
     driver.find_element_by_id("expDroope-experienceFor").click()
-    driver.find_element_by_partial_link_text("2 Year").click()
+    driver.find_element_by_partial_link_text("X years").click()
 
     driver.find_element_by_css_selector("button.col.search.l2.btn.btn-mid").click()
 
@@ -59,7 +59,7 @@ def executor():
     driver.execute_script("arguments[0].click();", drpdown)
 
     time.sleep(2)
-    driver.find_element_by_css_selector("div.acord_cont.open").find_element_by_partial_link_text("Bengaluru").click()
+    driver.find_element_by_css_selector("div.acord_cont.open").find_element_by_partial_link_text("Delhi").click()
 
     jobs = driver.find_elements_by_class_name("desig")
     print("jobs Length : "+str(len(jobs)))
